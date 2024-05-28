@@ -1,0 +1,42 @@
+a. PostgreSQL Installation Guide -
+   1. go to the official site - 
+      https://www.postgresql.org/
+   2. select the distribution depending os -
+      https://www.postgresql.org/download/linux/redhat/
+
+   3. perform the script -
+      # install the repository rpm:
+      $ sudo dnf install -y https://download.postgresql.org/pub/repos/yum/reporpms/F-39-x86_64/pgdg-fedora-repo-latest.noarch.rpm
+      # install postgresql
+      $ sudo dnf install -y postgresql16-server
+
+   4. to initialize the database
+      $ sudo /usr/pgsql-16/bin/postgresql-16-setup initdb
+       or
+      $ sudo postgresql-setup --initdb
+
+   5. start the postgresql 
+      $ sudo systemctl enable postgresql-16
+      $ sudo systemctl start postgresql-16
+
+b. PgAdmin Installation Guide - 
+   1. go to official site -
+      https://www.pgadmin.org/
+   2. select the distribution depending os -
+      https://www.pgadmin.org/download/pgadmin-4-rpm/
+   3. setup the rpm repository script -
+      $ sudo rpm -i https://ftp.postgresql.org/pub/pgadmin/pgadmin4/yum/pgadmin4-fedora-repo-2-1.noarch.rpm
+   4. setup the pgadmin tool -
+      # Install for both desktop and web modes.
+      $  sudo yum install pgadmin4
+
+      # Install for desktop mode only.
+      $  sudo yum install pgadmin4-desktop
+
+      # Install for web mode only.
+      $  sudo yum install pgadmin4-web
+   5. to run the pgadmin -
+      $ sudo /usr/pgadmin4/bin/setup-web.sh
+   6. to upgrade the pgadmin -
+      $ sudo yum upgrade pgadmin4
+
