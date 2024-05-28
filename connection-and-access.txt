@@ -1,0 +1,6 @@
+To Connect To PostgreSQL
+$ sudo systemctl start postgresql.service
+
+To Access To Postgress SQL Shell
+$ sudo -u postgres psql
+
