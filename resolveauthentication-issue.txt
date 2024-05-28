@@ -1,0 +1,15 @@
+Resolve Authentication Issue On pgAdmin Connect
+===============================================
+1) refere the official page -
+   https://www.postgresql.org/docs/current/auth-password.htm
+2. create user role with password -
+   a. to create role: 
+      CREATE ROLE role_name WITH LOGIN PASSWORD 'enter_password'
+   b. to alter password:
+      ALTER ROLE role_name WITH PASSWORD 'enter_password'
+   c. refer other options -
+      a. https://www.postgresql.org/docs/current/sql-alterrole.html
+      b. https://www.postgresql.org/docs/current/sql-createrole.html
+3) go to the pg_hba.conf file -
+   a. include the options of 'md5', 'password'
+      
